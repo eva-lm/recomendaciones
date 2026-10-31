@@ -1,20 +1,18 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+@use "1-settings/variables";
+@use "1-settings/typography";
 
-/**
- * Import dependencies
- */
-@use "dependencies";
+@use "2-tools/tools";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+@use "3-generic/reset";
 
-@use "layouts/home";
+@use "4-elements/elements";
 
-/**
- * Do NOT include anything else in this file!
- */
+@use "5-objects/container";
+
+@use "6-components/card";
+@use "6-components/hero";
+@use "6-components/btn";
+@use "6-components/header";
+@use "6-components/footer";
+
+@use "7-utilities/utilities";
