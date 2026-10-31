@@ -1,0 +1,21 @@
+@use "../1-settings/typography";
+
+h1,
+h3 {
+  font-family: typography.$font-heading;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+h2 {
+  font-family: typography.$font-paragraph;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+body {
+  font-family: typography.$font-paragraph;
+}
