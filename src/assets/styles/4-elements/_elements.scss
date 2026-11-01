@@ -1,10 +1,11 @@
 @use "../1-settings/typography";
+@use "../1-settings/variables";
 
 h1,
 h3 {
   font-family: typography.$font-heading;
   font-weight: 600;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
 }
 h1 {
   text-transform: uppercase;
@@ -17,5 +18,13 @@ h2 {
   font-size: 2rem;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
   font-family: typography.$font-paragraph;
+  background-color: variables.$bg;
+  color: variables.$black;
+  font-size: 1rem;
 }
