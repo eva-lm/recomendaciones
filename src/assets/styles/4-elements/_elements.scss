@@ -22,9 +22,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding: 2rem;
   font-family: typography.$font-paragraph;
   background-color: variables.$bg;
   color: variables.$black;
   font-size: 1rem;
+  padding-inline: 1.5rem;
 }

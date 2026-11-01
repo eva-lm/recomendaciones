@@ -1,17 +1,27 @@
 @use "../2-tools/tools";
 @use "../1-settings/variables";
+@use "sass:color";
+
 .hero {
   @include tools.flex-center;
   height: 100%;
 
   @at-root #{&}__content {
     @include tools.flex-column;
-    @at-root #{&}-info {
+    margin-top: 2rem;
+
+    @at-root #{&}-wrap {
       flex: 3;
-      background-color: variables.$secondary;
+      background-color: color.adjust(variables.$bg, $lightness: -11%);
       padding: 2.5rem;
       border-radius: 15px;
     }
+    p {
+      margin-bottom: 4rem;
+    }
+  }
+  @at-root #{&}__title {
+    color: color.adjust(variables.$secondary, $lightness: -25%);
   }
   .img-container {
     flex: 2;
@@ -25,15 +35,17 @@
   .hero__content {
     @include tools.flex-strech;
     flex-direction: row;
-    @at-root #{&}-info {
-      border-radius: 15px 0 0 15px;
+
+    @at-root #{&}-wrap {
+      border-radius: 0 15px 15px 0;
+
       img {
         height: 80px;
       }
     }
     .img-container {
-      border-radius: 0 15px 15px 0;
-      background-color: variables.$secondary;
+      background-color: color.adjust(variables.$bg, $lightness: -11%);
+      border-radius: 15px 0 0 15px;
     }
   }
 }

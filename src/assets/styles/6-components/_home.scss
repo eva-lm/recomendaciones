@@ -1,0 +1,29 @@
+@use "../2-tools/tools";
+@use "../1-settings/variables";
+@use "sass:color";
+
+.detail {
+  @include tools.flex-center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.home {
+  @at-root #{&}__title {
+    margin-top: 5rem;
+    border-bottom: solid 1px variables.$secondary;
+    padding-bottom: 0.7rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    color: color.adjust(variables.$secondary, $lightness: -25%);
+  }
+}
+.reasons__container {
+  @include tools.flex-strech;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.reasons__container .card {
+  flex: 1;
+}

@@ -1,7 +1,6 @@
 @use "../1-settings/variables";
 
 .header {
-  padding: 1.5rem 0;
   border-bottom: solid 2px variables.$secondary;
 
   &__icon-container {
@@ -24,9 +23,9 @@
   &__items {
     display: flex;
     flex-direction: column;
-    gap: 1.3rem;
+    gap: 1.2rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
 
     a {
       text-decoration: none;
@@ -34,15 +33,15 @@
       &:hover,
       &:active {
         color: variables.$primary;
-        width: 25%;
+        font-weight: 600;
       }
       &:hover + .border-decorative {
-        border-bottom: solid 3.5px variables.$black;
+        border-bottom: solid 3.5px variables.$primary;
       }
     }
     a + .border-decorative {
-      border-bottom: solid 3.5px transparent;
-      width: 20px;
+      border-bottom: solid 3px transparent;
+      width: 30px;
       transition: all 0.3s ease;
     }
   }

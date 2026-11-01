@@ -1,0 +1,16 @@
+@use "../1-settings/variables";
+@use "../2-tools/tools";
+
+.footer {
+  padding: 3rem 0;
+  border-top: solid 2px variables.$secondary;
+  margin-top: 5rem;
+  @include tools.flex-column;
+}
+@media (width >= 1200px) {
+  .footer {
+    padding: 3rem 0;
+    flex-direction: row;
+    @include tools.flex-between;
+  }
+}

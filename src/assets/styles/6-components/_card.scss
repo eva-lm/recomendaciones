@@ -1,0 +1,10 @@
+@use "../1-settings/variables";
+@use "sass:color";
+
+.card {
+  background-color: variables.$white;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid color.adjust(variables.$secondary, $lightness: 25%);
+  box-shadow: 0 10px 25px rgba(variables.$black, 0.08);
+}
