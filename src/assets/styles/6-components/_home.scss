@@ -1,5 +1,6 @@
 @use "../2-tools/tools";
 @use "../1-settings/variables";
+@use "../1-settings/typography";
 @use "sass:color";
 
 .detail {
@@ -19,11 +20,43 @@
     color: color.adjust(variables.$secondary, $lightness: -25%);
   }
 }
-.reasons__container {
-  @include tools.flex-strech;
-  gap: 2rem;
-  margin-top: 3rem;
+.reasons {
+  @at-root #{&}__container {
+    background-color: variables.$secondary;
+    padding: 2rem;
+    @include tools.flex-strech;
+    gap: 2rem;
+    margin-top: 3rem;
+    .card {
+      flex: 1;
+    }
+  }
 }
-.reasons__container .card {
-  flex: 1;
+
+.characters {
+  @at-root #{&}__container {
+    @include tools.flex-strech;
+    gap: 2rem;
+    margin-top: 3rem;
+    .card {
+      //  flex: 1;
+    }
+  }
+  @at-root #{&}__avatar {
+    @include tools.flex-center;
+    background-color: variables.$primary;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+  }
+  @at-root #{&}__initial {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: typography.$font-heading;
+    color: variables.$secondary;
+  }
+  @at-root #{&}__wrap {
+    @include tools.flex-center;
+    gap: 1rem;
+  }
 }
