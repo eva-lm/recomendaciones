@@ -4,7 +4,7 @@
 @use "sass:color";
 
 .detail {
-  @include tools.flex-center;
+  @include tools.flex-column;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -21,10 +21,11 @@
   }
 }
 .reasons {
+  text-align: center;
   @at-root #{&}__container {
     background-color: variables.$secondary;
     padding: 2rem;
-    @include tools.flex-strech;
+    @include tools.flex-column;
     gap: 2rem;
     margin-top: 3rem;
     .card {
@@ -32,15 +33,15 @@
     }
   }
 }
-
+.synopsis {
+  text-align: center;
+}
 .characters {
+  text-align: center;
   @at-root #{&}__container {
-    @include tools.flex-strech;
+    @include tools.flex-column;
     gap: 2rem;
     margin-top: 3rem;
-    .card {
-      //  flex: 1;
-    }
   }
   @at-root #{&}__avatar {
     @include tools.flex-center;
@@ -55,8 +56,47 @@
     font-family: typography.$font-heading;
     color: variables.$secondary;
   }
+  @at-root #{&}__cite {
+    font-weight: 400;
+    color: #4a4444;
+  }
   @at-root #{&}__wrap {
     @include tools.flex-center;
     gap: 1rem;
+  }
+  @at-root #{&}__container-pj {
+    border-top: solid 1px variables.$secondary;
+    @include tools.flex-center;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .detail {
+    @include tools.flex-center;
+    flex-direction: row;
+  }
+}
+@media (width >= 1024px) {
+  .reasons {
+    @at-root #{&}__container {
+      @include tools.flex-strech;
+      flex-direction: row;
+      .card {
+        flex: 1;
+      }
+    }
+  }
+}
+@media (width >= 1024px) {
+  .characters {
+    @at-root #{&}__container {
+      @include tools.flex-strech;
+      flex-direction: row;
+      .card {
+        flex: 1;
+      }
+    }
   }
 }

@@ -6,6 +6,7 @@
   border-top: solid 2px variables.$secondary;
   margin-top: 5rem;
   @include tools.flex-column;
+  text-align: center;
 }
 @media (width >= 1200px) {
   .footer {
